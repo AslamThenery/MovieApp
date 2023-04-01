@@ -1,27 +1,24 @@
-import { React, useEffect } from 'react';
+import { React,useEffect } from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
-import baseUrl from '../../Common/movieApi';
-import  {API_KEY} from "../../Common/api/movieApiKey"
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import {  fetchAsyncMovies } from '../../Features/Movies/movieSlice';
+import MovieCard from '../../Components/MovieCard/MovieCard';
 function Home() {
+  const dispatch = useDispatch()
 
   useEffect(() => {
-   console.log("use effect");
-    const fetchMovies = () => {
-       axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}`).then((res)=>{
-        console.log("response is: ", res.data);
-       })
-    }
-
-    fetchMovies()
-  
+    
+    dispatch(fetchAsyncMovies())  
+   
   }, [])
   
+
   return (
     <div>
-      <div className="baner-img"></div>
         <Header />
+        <MovieCard title="action" />
+       
         <Footer />
         
     </div>
@@ -29,3 +26,10 @@ function Home() {
 }
 
 export default Home
+
+
+  // /genre/movie/list
+    //  let response =  await  axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+    
+    //  console.log("movies are", response );
+    //  await dispatch(addMovies("response"))

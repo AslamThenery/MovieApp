@@ -1,1 +1,41 @@
-/*# sourceMappingURL=MovieCard.css.map */
+.movies-card {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movies-card .sliders .slider .post {
+  height: 50vh;
+  background-color: #0f171e;
+  margin-top: 50px;
+  transition: 0.2s;
+}
+
+h3 {
+  color: wihte;
+}
+
+.movies-card .slider {
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.movies-card .sliders .slider .post img {
+  margin: 0px 20px;
+  width: 75%;
+  height: 38vh;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.movies-card .sliders .slider .post:hover {
+  transform: scale(1.1, 1.2);
+}
+
+.post .title {
+  color: white;
+  margin: 0.8em 0.8em;
+}/*# sourceMappingURL=MovieCard.css.map */
