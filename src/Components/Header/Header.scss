@@ -1,13 +1,20 @@
 @import "../../Common/colors.scss";
 
 .header{
-    background-color: $secondary-color;
-    height: 72px;
+    // background-color: transparent;
+    background-color: $primary-color;
+    width: 100%;
+    height: 12vh;
     padding: 0 40px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between ;
+    position: fixed;
+    z-index: 111;
 }
+// LOGO DESIGN----------------------
 .logo{
     color: $font-primary;
     font-size: 20px;
@@ -16,4 +23,97 @@
 .user-img, .user-img img{
     width: 38px;
     height: 38px;
+}
+.header .pages {
+    width: 30%;
+}
+.header .pages nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.header .pages nav ul li{
+    list-style-type: none;
+    color: $font-primary;
+}
+.header .pages nav ul li a{
+    color: $font-primary;
+    font-weight: bold;
+}
+// SEARCH DESIGN---------------------
+.search{
+    width: 30%
+}
+// SEARCH ICON
+#search-icon{
+    color: $font-primary;
+    cursor: pointer;
+    font-weight: 10px;
+    margin:7px 5px -8px 3px;
+height: 25px;
+
+}
+// SEARCH INPUT
+.search input{
+    border: none;
+    outline: none;
+    height: 25px;
+    margin-bottom: 8px;
+    margin-left: 4px;
+    width: 80%;
+    border-radius: 3px;
+}
+.small-device #menu-icon{
+    display: none;
+   }
+   .small-nav{
+    display: none;
+   }
+
+//<--------------------------- RESPONSIVE DESIGN----------------------->
+
+@media screen and (max-width:768px) {
+   .header .pages{
+    display:none;
+   }
+   .logo{
+    font-size: medium;
+   }
+  
+    .small-device #menu-icon{
+        color: $font-primary;
+        display: block;
+        cursor: pointer;
+       }
+       .search{
+        width: 50%;
+       }
+       
+       .small-nav nav ul{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           justify-content: space-around;
+           align-items: center;
+          
+           width: 100%;
+           height: 100vh;
+           position: absolute;
+           background-color: $third-color;
+      
+           right: 0px;
+           margin-top: 38px;
+           padding: 20px;
+           transition: 0.4s;  
+       }
+       .header .small-nav nav ul li{
+           list-style-type: none;
+           color: $font-primary;
+       }
+       .header .small-nav nav ul li a{
+           color: $font-primary;
+           font-weight: bold;
+       }
+
 }

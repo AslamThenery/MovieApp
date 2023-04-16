@@ -1,21 +1,15 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import {URLS} from "../../Common/movieApi"
-import { API_KEY } from "../../Common/api/movieApiKey";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
 
-
- export const fetchAsyncMovies = createAsyncThunk("movies/fetchAsynMovies" , async() => {
-           let response = await axios.get(`${URLS.POPULAR}?api_key=${API_KEY}`)
-        // let response;
-            console.log("Async movies working....", response.data);
-            console.log( response.data);
-           return  response.data
-})
 
 
 
 const initialState = {
-    movies:[],
+    popularMovies:[],
+    trendingMovies:[],
+    topRatedMovies:[],
+     latestMovies:[],
+     upcomingMovies:[],
+     actionMovies:[]
 }
 
 const movieSlice = createSlice ({
@@ -23,30 +17,70 @@ const movieSlice = createSlice ({
     name:"movies",
     initialState,
     reducers:{
-        addMovies : (state, action) => {
+      
+        addPopularMovies: (state, action) => {
             
-         state.movies.push(action.payload) ;
-            console.log("ACTION IS:",action.payload);
+            // console.log("Popular is :", action.payload);
+            // console.log("State is :", state);
 
+            state.popularMovies = action.payload;
+       
+        },
+        addTrendingMovies: (state, action) => {
+            
+            // console.log("Trending is :", action.payload);
+            // console.log("State is :", state);
+
+            state.trendingMovies = action.payload;
+       
+        },
+        addTopRatedMovies: (state, action) => {
+            
+            console.log("topRated REDUCER is :", action.payload);
+            // console.log("State is :", state);
+
+            state.topRatedMovies = action.payload;
+       
+        },
+        addLatestMovies: (state, action) => {
+            
+            // console.log("Latest is :", action.payload);
+            // console.log("State is :", state);
+
+            state.latestMovies = action.payload;
+       
+        },
+        addActionMovies: (state, action) => {
+            
+            console.log("Actoin movies are adding.... :", action.payload);
+            // console.log("State is :", state);
+
+            state.actionMovies = action.payload;
+       
         }
-    },
-    extraReducers: {
-        [fetchAsyncMovies.pending] : ()=> {
-                 console.log("Pending...");
-        },
-        [fetchAsyncMovies.fulfilled] : ( state , action )=> {
-            
-            console.log("Fetch successfully...");
-            console.log(action.payload);
-            return {...state, movies: action.payload}
-        },
-        [fetchAsyncMovies.rejected] : ()=> {
-            console.log("Rejected...");
-
-        },
+      
     }
 })
 
-export const {addMovies} = movieSlice.actions;
-export const getAllMovies = (state) => state.movies.movies
+export const { addPopularMovies, addLatestMovies, addTrendingMovies, addTopRatedMovies, addActionMovies } = movieSlice.actions;
+// export const getAllMovies = (state) => state.movies.movies
 export default movieSlice.reducer;
+
+
+
+
+// extraReducers: {
+//     [fetchAsyncMovies.pending] : ()=> {
+//              console.log("Pending...");
+//     },
+//     [fetchAsyncMovies.fulfilled] : ( state , action )=> {
+        
+//         console.log("Fetch successfully...");
+//         console.log(action.payload);
+//         return {...state, movies: action.payload}
+//     },
+//     [fetchAsyncMovies.rejected] : ()=> {
+//         console.log("Rejected...");
+
+//     },
+// }

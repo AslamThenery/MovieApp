@@ -1,41 +1,51 @@
 .movies-card {
-  height: 70vh;
+  height: 55vh;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.movies-card .sliders .slider .post {
-  height: 50vh;
-  background-color: #0f171e;
-  margin-top: 50px;
-  transition: 0.2s;
+.movies-card .card-title {
+  color: white;
 }
 
-h3 {
-  color: wihte;
-}
-
-.movies-card .slider {
-  height: 60vh;
-  display: flex;
-  flex-direction: row;
+.mywiper {
+  height: 90vh;
+  width: 100%;
   padding: 5px;
 }
 
-.movies-card .sliders .slider .post img {
-  margin: 0px 20px;
-  width: 75%;
-  height: 38vh;
-  cursor: pointer;
-  border-radius: 10px;
+.mySwiper .slides .card-data {
+  width: 100%;
+  background-color: #24223a;
 }
 
-.movies-card .sliders .slider .post:hover {
-  transform: scale(1.1, 1.2);
+.mySwiper .slides .card-data img {
+  height: 40vh;
+  width: 100%;
+  transition: 0.4s;
 }
 
-.post .title {
+.mySwiper .slides .card-data .movie-title {
+  transition: 0.4s;
   color: white;
-  margin: 0.8em 0.8em;
+}
+
+.mySwiper .slides .card-data {
+  height: 50vh;
+  cursor: pointer;
+  width: 96%;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-left: 5px;
+}
+
+.mySwiper .slides .card-data img:hover {
+  width: 102%;
+  height: 42vh;
+}
+
+.movie-rating {
+  margin-top: 5px;
+  color: white;
 }/*# sourceMappingURL=MovieCard.css.map */

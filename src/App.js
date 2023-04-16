@@ -11,6 +11,7 @@ import Home from './Pages/Home/Home';
 import MovieDetails from './Components/MovieDetails/MovieDetails';
 
 import PageNotFound from './Pages/PageNoteFound/PageNotFound';
+import TvShows from './Pages/TvShows/TvShows';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home />} />
+          <Route path="/tvShows" element={<TvShows />} />
           <Route path="/movie/:tmdbId" element={<MovieDetails />} />
           <Route element={<PageNotFound />} />
 

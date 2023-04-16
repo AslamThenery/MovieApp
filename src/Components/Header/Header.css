@@ -1,10 +1,15 @@
 .header {
-  background-color: #1a242f;
-  height: 72px;
+  background-color: #06041f;
+  width: 100%;
+  height: 12vh;
   padding: 0 40px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 111;
 }
 
 .logo {
@@ -16,4 +21,95 @@
 .user-img, .user-img img {
   width: 38px;
   height: 38px;
+}
+
+.header .pages {
+  width: 30%;
+}
+
+.header .pages nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header .pages nav ul li {
+  list-style-type: none;
+  color: white;
+}
+
+.header .pages nav ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+.search {
+  width: 30%;
+}
+
+#search-icon {
+  color: white;
+  cursor: pointer;
+  font-weight: 10px;
+  margin: 7px 5px -8px 3px;
+  height: 25px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  height: 25px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  width: 80%;
+  border-radius: 3px;
+}
+
+.small-device #menu-icon {
+  display: none;
+}
+
+.small-nav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header .pages {
+    display: none;
+  }
+  .logo {
+    font-size: medium;
+  }
+  .small-device #menu-icon {
+    color: white;
+    display: block;
+    cursor: pointer;
+  }
+  .search {
+    width: 50%;
+  }
+  .small-nav nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #24223a;
+    right: 0px;
+    margin-top: 38px;
+    padding: 20px;
+    transition: 0.4s;
+  }
+  .header .small-nav nav ul li {
+    list-style-type: none;
+    color: white;
+  }
+  .header .small-nav nav ul li a {
+    color: white;
+    font-weight: bold;
+  }
 }/*# sourceMappingURL=Header.css.map */

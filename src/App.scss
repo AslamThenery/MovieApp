@@ -1,12 +1,14 @@
 @import "./Common/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+
 
 *{
     margin:0;
     padding: 0;
-    // box-sizing: border-box;
-    font-family: "Open Sans" , sans-serif;
-    // -webkit-box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
 
+  
 }
 
 a{
@@ -15,8 +17,18 @@ a{
 
 body{
     background-color: $primary-color;
+    // background-image: linear-gradient(45deg, #06041f, #652856);
+    background-size: 100% 100vh;
+
+    // background-color: red;
+    // background-image: linear-gradient(180deg, red, yellow);
+
+    // background-image: url(http://image.tmdb.org/t/p/original//uR0FopHrAjDlG5q6PZB07a1JOva.jpg);
+    // background-size: 100%;
+    // filter: blur(8px);
+    // -webkit-filter: blur(8px);
 
 }
 .container{
-    margin: 0px 40px;
+    // margin: 0px 10px;
 }

@@ -1,46 +1,63 @@
 @import "../../Common/colors.scss";
 
 .movies-card{
-    // background-color: red;
-    height: 70vh;
+    height: 55vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.movies-card .sliders .slider .post{
-    
-    height: 50vh;
-
-    background-color: $primary-color;
-     margin-top: 50px;
-    // border-color: red;
-    transition: 0.2s;
-}
-h3{
-    color: wihte;
-}
-// DESIGNING THE SLIDER
-.movies-card .slider{
-    // background-color: aqua;
-    // width: 100%;
-    height: 60vh;
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-}
-// CARD IMAGE
-.movies-card .sliders .slider .post img{
-margin: 0px 20px;
-width: 75%;
-height: 38vh;
-cursor: pointer;
-border-radius: 10px;
-}
-.movies-card .sliders .slider .post:hover{
-    transform: scale(1.1,1.2);
-    
-}
-.post .title{
+.movies-card .card-title{
     color: $font-primary;
-    margin:0.8em 0.8em;
+}
+ .mywiper{
+    // background-color: blue;
+    height: 90vh;
+    width: 100%;
+    padding: 5px;
+
+}
+.mySwiper .slides .card-data{
+    //  height: 200vh;
+     width: 100%;
+     background-color: $third-color;
+    //  background-color: red;
+    //  padding: 15px;
+
+}
+// STYLING THE MOVIE CARD IMAGE
+.mySwiper .slides .card-data img{
+    height: 40vh;
+    width: 100%;
+  transition: 0.4s;
+
+}
+// STYLING THE MOVIE CARD TITLE
+.mySwiper .slides .card-data .movie-title{
+    // height: 40vh;
+    // width: 102%;
+  transition: 0.4s;
+  color: $font-primary;
+  
+
+}
+.mySwiper .slides .card-data{
+    // background-color: blue;
+    height: 50vh;
+    cursor: pointer;
+    width: 96%;
+    cursor: pointer;
+    transition: 0.4s;
+    // padding: 1px 2px 5px 10px;   
+    margin-left: 5px;
+}
+.mySwiper .slides .card-data img:hover{
+    // background-color: black;
+    width: 102%;
+    height: 42vh;
+}
+
+.movie-rating
+{
+    margin-top: 5px;
+    color:$font-primary
 }

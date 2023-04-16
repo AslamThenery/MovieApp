@@ -1,6 +1,4 @@
 
-
-
 export const  URLS = {
     
     BASE_URL : "https://api.themoviedb.org/3",
@@ -8,5 +6,6 @@ export const  URLS = {
     GENRES: "https://api.themoviedb.org/3/genre/movie/list",
     TRENDING: "https://api.themoviedb.org/3/trending/all/day",
     POPULAR: "https://api.themoviedb.org/3/movie/popular",
-    LATEST: "https://api.themoviedb.org/3/movie/latest"
+    LATEST: "https://api.themoviedb.org/3/movie/latest",
+    
 }
